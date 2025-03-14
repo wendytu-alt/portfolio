@@ -26,22 +26,23 @@ $mgbottom: 10px;
 
 /*定義rwd尺寸設定*/
 @mixin pad {
-  @media all and(max-width: 1100px) {
+  @media (max-width: 1100px) {
     @content;
   }
 }
+
 @mixin minPad {
-  @media all and(max-width: 900px) {
+  @media (max-width: 900px) {
     @content;
   }
 }
 @mixin mobile {
-  @media all and(max-width: 768px) {
+  @media (max-width: 768px) {
     @content;
   }
 }
 @mixin minMobile {
-  @media all and(max-width: 360px) {
+  @media (max-width: 360px) {
     @content;
   }
 }

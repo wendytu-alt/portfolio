@@ -1,89 +1,88 @@
 @charset "UTF-8";
 
 /////////mixin/////////
-@import 'mixin';
+@import "mixin";
 
 /*頁面基本設定*/
-h2.inner{
+h2.inner {
   font-size: 1.5rem;
   border-left: 6px solid #000;
   padding-left: 15px;
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 50px;
-  @include mobile(){
-        margin-bottom: 40px;
+  @include mobile() {
+    margin-bottom: 40px;
   }
 }
-.pofoTab{
+.pofoTab {
   display: flex;
   // margin-bottom: 40px;
-  li{
+  li {
     width: 25%;
     text-align: center;
     border-bottom: 1px solid #070707;
-    a{
+    a {
       width: 100%;
       display: block;
-      padding:10px 0;
+      padding: 10px 0;
       font-size: 1.25rem;
-      @include mobile(){
+      @include mobile() {
         font-size: 1rem;
       }
     }
   }
-  .on{
+  .on {
     background-color: #000;
-    a{
-      color:#fff;
+    a {
+      color: #fff;
     }
   }
 }
-.subpofoTab{
+.subpofoTab {
   background-color: #eee;
   display: flex;
   margin-bottom: 40px;
-  @include mobile(){
-        margin-bottom: 25px;
+  @include mobile() {
+    margin-bottom: 25px;
   }
-  li{
+  li {
     width: 15%;
     text-align: center;
-    @include mobile(){
+    @include mobile() {
       width: 20%;
     }
-    a{
-      width:100%;
+    a {
+      width: 100%;
       display: block;
-      padding:10px;
+      padding: 10px;
       font-size: 1rem;
-      @include mobile(){
-      font-size: 0.875rem
+      @include mobile() {
+        font-size: 0.875rem;
+      }
     }
-    };
-    
   }
-  .on{
-      border-bottom: 4px solid #000;
-      font-weight: bold;
-    }
+  .on {
+    border-bottom: 4px solid #000;
+    font-weight: bold;
+  }
 }
 /*共用設定*/
 .block {
   padding: 35px 0;
   position: relative;
   @include mobile() {
-     padding: 10px 0;
+    padding: 10px 0;
   }
 }
-.block.b0{
+.block.b0 {
   padding-bottom: 0;
 }
-.gray.block{
- background-color: #f8f8f8;
- z-index: 2;
+.gray.block {
+  background-color: #f8f8f8;
+  z-index: 2;
 }
-.more{
+.more {
   font-weight: bold;
 }
 .titleBx {
@@ -97,12 +96,12 @@ h2.inner{
     padding-bottom: 3px;
   }
   &::before {
-    content: '';
+    content: "";
     display: block;
     bottom: -5px;
     width: 60px;
     height: 3px;
-    background-color: #b10404 ;
+    background-color: #b10404;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -139,17 +138,17 @@ h2.inner{
 .titleBx.right {
   width: 100%;
   text-align: left;
-  @include mobile(){
-     margin-bottom: 15px;
+  @include mobile() {
+    margin-bottom: 15px;
   }
   &::before {
     z-index: 1;
-    content: '';
+    content: "";
     display: block;
     top: 70px;
     width: 3px;
     height: 30px;
-    background-color: #b10404 ;
+    background-color: #b10404;
     position: absolute;
     left: 0%;
     transform: translateX(0%);
@@ -161,31 +160,30 @@ h2.inner{
   h2 {
     padding-left: 15px;
   }
-  .more{
+  .more {
     position: absolute;
-    right:0;
-    bottom:20px;
+    right: 0;
+    bottom: 20px;
     font-weight: bold;
     text-align: center;
     background-color: #000;
-    color:#fff;
-    padding:5px 10px;
+    color: #fff;
+    padding: 5px 10px;
     display: inline-block;
     width: 80px;
     transition: 0.2s all ease-in-out;
-    &:hover{
+    &:hover {
       background-color: #b10404;
     }
 
     @include mobile() {
       left: auto;
-      right:0;
-      bottom:10px
+      right: 0;
+      bottom: 10px;
     }
   }
-  
 }
-.fixleft{
+.fixleft {
   position: absolute;
   left: 0;
   top: 20px;
@@ -193,36 +191,36 @@ h2.inner{
   background-color: #f8f8f8;
   height: 100%;
   width: calc(100vw / 1.4 / 4);
-  @include pad (){
+  @include pad() {
     position: relative;
   }
-  @include mobile(){
+  @include mobile() {
     position: relative;
     width: 100%;
     background-color: transparent;
-    top:0
+    top: 0;
   }
- &::before{
-   content:"";
-   width: 1000px;
-   height: 100%;
-   background-color: #f8f8f8;
-   position: absolute;
-   left: 0;
-   top:0;
-   transform: translateX(-100%);
- }
- .more{
-  position: absolute;
-  left: 0;
-  bottom: 0px;
-  font-weight: bold;
+  &::before {
+    content: "";
+    width: 1000px;
+    height: 100%;
+    background-color: #f8f8f8;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+  }
+  .more {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    font-weight: bold;
   }
 }
 
-.fixleftCon{
+.fixleftCon {
   margin-left: calc(100vw / 1.4 / 4);
-  @include mobile(){
+  @include mobile() {
     margin-left: 0;
   }
 }
@@ -234,7 +232,7 @@ h2.inner{
   justify-content: space-between;
   margin-bottom: 30px;
   &::before {
-    content: '';
+    content: "";
     display: block;
     width: 90%;
     height: 2px;
@@ -243,15 +241,15 @@ h2.inner{
     top: 5px;
     background: linear-gradient(to right, #fff, #888);
   }
-  
+
   li {
     text-align: center;
     width: 16%;
     z-index: 1;
     position: relative;
     cursor: pointer;
-    &:hover h3{
-      color:#b10404
+    &:hover h3 {
+      color: #b10404;
     }
   }
   .circle {
@@ -274,22 +272,22 @@ h2.inner{
     font-size: 1rem;
     font-weight: 300;
     transition: 0.3s all ease-in-out;
-    @include mobile(){
+    @include mobile() {
       font-size: 0.875rem;
       line-height: 1.3;
       font-weight: bold;
     }
   }
-  .swiper-slide-thumb-active{
+  .swiper-slide-thumb-active {
     .circle {
       width: 24px;
       height: 24px;
       position: relative;
       top: -5px;
       margin-bottom: 13px;
-      background-color:#b10404 ;
+      background-color: #b10404;
       &::before {
-        content: '';
+        content: "";
         display: block;
         position: absolute;
         left: 50%;
@@ -301,26 +299,26 @@ h2.inner{
         border-radius: 50%;
       }
     }
-    h3{
-      color:#b10404 ;
+    h3 {
+      color: #b10404;
     }
-    h4{
-      color:#000;
+    h4 {
+      color: #000;
       font-weight: bold;
     }
   }
 }
 /*基本設定*/
-.inline{
+.inline {
   display: flex;
 }
-.mb-s{
+.mb-s {
   margin-bottom: 10px;
 }
-.mb-m{
+.mb-m {
   margin-bottom: 20px;
 }
-.mb-lg{
+.mb-lg {
   margin-bottom: 40px;
 }
 /*frame*/
@@ -336,161 +334,157 @@ h2.inner{
 /*個人經歷內容*/
 .experCon {
   margin-top: 25px;
-  padding:25px 15px;
-  @include mobile(){
-    padding:15px;
+  padding: 25px 15px;
+  @include mobile() {
+    padding: 15px;
   }
-  .incon{
+  .incon {
     max-width: 1000px;
-    margin:0 auto;
+    margin: 0 auto;
   }
-  .stepconSwiper{
+  .stepconSwiper {
     overflow: hidden;
   }
   h4 {
     font-size: 1.125rem;
     font-weight: bold;
     margin-bottom: 10px;
-    @include mobile(){
+    @include mobile() {
       margin-bottom: 5px;
       font-size: 1.125rem;
     }
-    
   }
-  p{
+  p {
     font-size: 1rem;
   }
   ol {
-    
-    li{
-    margin-left: 20px;
-    margin-bottom: 5px;
+    li {
+      margin-left: 20px;
+      margin-bottom: 5px;
     }
   }
 }
-.experimgBx{
+.experimgBx {
   justify-content: space-between;
-  @include mobile(){
-      flex-wrap: wrap;
-    }
-  li{
+  @include mobile() {
+    flex-wrap: wrap;
+  }
+  li {
     width: 30%;
     margin-bottom: 10px;
-    @include mobile(){
-      width:100%
+    @include mobile() {
+      width: 100%;
     }
-    .imgbx{
+    .imgbx {
       // padding-bottom: 56%;
       position: relative;
-      &.top{
-        img{
+      &.top {
+        img {
           object-position: top;
         }
       }
     }
-    img{
+    img {
       position: absolute;
       -o-object-fit: cover;
       object-fit: cover;
       width: 100%;
       height: 100%;
-      
     }
   }
 }
-.wk01{
-  .imgbx{
+.wk01 {
+  .imgbx {
     padding-bottom: 156%;
   }
- }
- .wk02{
-  .imgbx{
+}
+.wk02 {
+  .imgbx {
     padding-bottom: 40%;
   }
- }
-.wk03{
-  .imgbx{
+}
+.wk03 {
+  .imgbx {
     padding-bottom: 58%;
   }
- }
- .wk04{
-  .imgbx{
+}
+.wk04 {
+  .imgbx {
     padding-bottom: 60%;
   }
- }
-.wk05{
-  .imgbx{
+}
+.wk05 {
+  .imgbx {
     padding-bottom: 56%;
   }
- }
+}
 /*網站輪播區塊*/
 
-.webimgbx{
+.webimgbx {
   position: relative;
   padding-bottom: 90%;
   overflow: hidden;
-  &::before{
-    content:"";
+  &::before {
+    content: "";
     width: 100%;
     height: 80px;
-    background: linear-gradient(to top,#f8f8f8,transparent 100%);
+    background: linear-gradient(to top, #f8f8f8, transparent 100%);
     position: absolute;
     left: 0;
-    bottom:0;
+    bottom: 0;
     z-index: 2;
   }
-  img{
+  img {
     position: absolute;
     width: 100%;
-    top:0;
+    top: 0;
     left: 0;
   }
 }
 
-
 /*動畫區塊*/
-.aniBx{
+.aniBx {
   position: relative;
   padding-bottom: 60px;
-  @include mobile(){
+  @include mobile() {
     padding-bottom: 40px;
   }
-  &::before{
-    content:"";
-    width:100%;
+  &::before {
+    content: "";
+    width: 100%;
     height: 200px;
     position: absolute;
     left: 0;
-    bottom:0;
+    bottom: 0;
     background-color: #eeeeee;
     z-index: 2;
   }
-  .more{
+  .more {
     border-bottom: 2px solid #000;
-    &:hover{
+    &:hover {
       border-color: #b10404;
-      color:#b10404;
+      color: #b10404;
     }
   }
 }
 
-.phoneBx{
+.phoneBx {
   max-width: 250px;
   // height: 400px;
-  margin:0 auto;
+  margin: 0 auto;
   // background: #0c0c0c;
   border-radius: 10px;
-  padding:15px;
-  @include mobile(){
+  padding: 15px;
+  @include mobile() {
     max-width: 100%;
     height: auto;
     width: 100%;
   }
 }
-.webBx{
+.webBx {
   max-width: 700px;
-   margin:0 auto;
-   @include mobile(){
+  margin: 0 auto;
+  @include mobile() {
     max-width: 100%;
     height: auto;
     width: 100%;
@@ -499,19 +493,19 @@ h2.inner{
 .videoSwiper {
   overflow: hidden;
 }
-.videoSwiper .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+.videoSwiper .swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
   background-image: url(../images/cir_arR.png);
   width: 50px;
   height: 50px;
-  background-size:50px 50px;
-
+  background-size: 50px 50px;
 }
-.videoSwiper .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+.videoSwiper .swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
   background-image: url(../images/cir_arL.png);
   width: 50px;
   height: 50px;
-  background-size:50px 50px;
-  
+  background-size: 50px 50px;
 }
 
 /*ul ol 基本設定*/
@@ -519,21 +513,19 @@ ol li {
   list-style: decimal;
   font-size: 1rem;
 }
-.innerListBx{
-  -moz-column-count:4; /* Firefox */ /* Safari 和 Chrome */
-  column-count:4;
+.innerListBx {
+  -moz-column-count: 4; /* Firefox */ /* Safari 和 Chrome */
+  column-count: 4;
   -moz-column-gap: 1em;
   column-gap: 1em;
   width: 100%;
-  margin:0 auto;
-  @include mobile(){
-   -moz-column-count:2; /* Firefox */ /* Safari 和 Chrome */
-    column-count:2;
+  margin: 0 auto;
+  @include mobile() {
+    -moz-column-count: 2; /* Firefox */ /* Safari 和 Chrome */
+    column-count: 2;
   }
-
-
 }
-.inli-item{
+.inli-item {
   // padding: 2em;
   margin-bottom: 2em;
   -moz-column-break-inside: avoid;
@@ -542,160 +534,153 @@ ol li {
   text-align: center;
   position: relative;
   cursor: pointer;
-  &:hover .bg{
-      background-color: rgba(0,0,0,0.6);
+  &:hover .bg {
+    background-color: rgba(0, 0, 0, 0.6);
   }
-  &:hover .txt{
+  &:hover .txt {
     opacity: 1;
-    top:40px
+    top: 40px;
   }
-  .txt{
+  .txt {
     position: absolute;
     width: 80%;
-    color:#fff;
+    color: #fff;
     font-weight: bold;
     left: 50%;
     transform: translateX(-50%);
-    top:60px;
+    top: 60px;
     z-index: 3;
     opacity: 0;
     transition: 0.3s all ease-in-out;
-    h4{
+    h4 {
       font-size: 1.3rem;
       margin-bottom: 10px;
       font-weight: bold;
     }
-    p{
+    p {
       font-size: 0.875rem;
       font-weight: 400;
       line-height: 1.7;
     }
-    .icon{
+    .icon {
       width: 25px;
       height: 25px;
-      margin:0 auto;
+      margin: 0 auto;
       margin-bottom: 15px;
       display: block;
-      background: url(../images/link.png)no-repeat center center /contain;
-      
+      background: url(../images/link.png) no-repeat center center / contain;
     }
   }
-  img{
+  img {
     position: relative;
-    z-index: 1;  
+    z-index: 1;
   }
-  .bg{
+  .bg {
     z-index: 2;
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0;
-    top:0;
+    top: 0;
     transition: 0.3s all ease-in-out;
-    
   }
-  
 }
-.inli-item:nth-child(3n){
+.inli-item:nth-child(3n) {
   margin-right: 0;
 }
 
 /*內頁設定*/
-.block.top.spe{
-  .head{
-     display: none;
+.block.top.spe {
+  .head {
+    display: none;
   }
-  .in{
+  .in {
     padding-top: 40px;
     // @include mobile(){
     //   padding-top: 30px;
     // }
   }
   .tC {
-    color:#fff;
-    p{
+    color: #fff;
+    p {
       margin-bottom: 100px;
     }
   }
-  h2{
-    @include mobile(){
+  h2 {
+    @include mobile() {
       margin-bottom: 10px;
     }
-
   }
-  .bgImg{
-    @include mobile(){
+  .bgImg {
+    @include mobile() {
       height: 130px;
     }
   }
-
 }
-.block.top{
+.block.top {
   padding-top: 0;
-  .in{
+  .in {
     padding-top: 250px;
   }
-  .head{
+  .head {
     position: absolute;
     left: 50%;
-    top:80px;
+    top: 80px;
     transform: translateX(-50%);
     width: 150px;
     height: 150px;
     border-radius: 50%;
     // background-color: #000;
-    background:#fff url(../img/head.png)no-repeat center center /cover;
-    box-shadow: 1px 0 10px 0 rgba(58, 79, 117,0.2);
+    background: #fff url(../img/head.png) no-repeat center center / cover;
+    box-shadow: 1px 0 10px 0 rgba(58, 79, 117, 0.2);
   }
-  h2{
+  h2 {
     font-size: 1.5rem;
     font-weight: bold;
   }
-  p{
+  p {
     font-size: 1rem;
   }
 }
-.bgImg{
+.bgImg {
   position: absolute;
   width: 100%;
   height: 150px;
   overflow: hidden;
   background-color: #fff;
   z-index: 2;
-  img{
+  img {
     position: absolute;
     width: 100%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    @include mobile(){
+    @include mobile() {
       width: 300%;
     }
   }
-  
 }
-.person{
-  h4{
+.person {
+  h4 {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 5px;
   }
-  p{
+  p {
     margin-bottom: 25px;
     font-size: 1rem;
-    color:#999;
+    color: #999;
     padding-left: 24px;
-    &::before{
-      content:"—";
+    &::before {
+      content: "—";
       margin-right: 10px;
       position: absolute;
       left: 20px;
     }
-    
   }
-  P+P{
-      margin-top: -15px;
-    }
+  P + P {
+    margin-top: -15px;
+  }
 }
 /***** 共用結束*******/
 
